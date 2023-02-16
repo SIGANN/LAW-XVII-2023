@@ -17,5 +17,5 @@ To deploy changes:
 
 NB: Only edit the files under `pages/`, since these are the ones used by the build script. Any HTML files in the repository root will be overwritten on deployment.
 
-NB: The two branches have been cleaned up to avoid confusion. Now the directory structure (`pages/`, `images/`, etc.) only lives on this branch (the `main` branch) and gets flattened during build. The live page at `gh-pages` does not have an directories, and thus paths to, e.g., images from any html pages should not specify a directory, just the base file name.
+NB: The two branches have been cleaned up to avoid confusion since the directory structure gets flattened during build, but used to still be present in `gh-pages`. Now the directory structure (`pages/`, `images/`, etc.) only lives on this branch (the `main` branch). The live page at `gh-pages` does not have any directories, and thus paths to, e.g., images from any html pages should not specify a directory, just the base file name.
 
