@@ -244,7 +244,7 @@ img {
     max-width: 50%
 }
 .image {
-    flex-basis: 40%
+    flex-basis: auto
 }
 .text {
     font-size: 20px;
