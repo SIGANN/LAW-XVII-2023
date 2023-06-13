@@ -39,6 +39,8 @@ def add_poster_session_info(new_program_html):
         for paper_no in poster_sessions[poster_session]:
             title = info[paper_no][0]
             authors = info[paper_no][1]
+            if paper_no >= 61:
+                new_program_html += "(ACL Findings) "
             new_program_html += title + "<br/>\n"
             new_program_html += "<i>" + authors + "</i><br/><br/>\n\n"
     return new_program_html
