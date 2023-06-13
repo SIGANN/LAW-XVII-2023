@@ -52,8 +52,7 @@ import shutil
 # (2) the images to be included and (3) the style sheets to be included. Edit
 # these as needed.
 
-PAGES = ["cfp", "committee", "index", "accepted", "program", "invited",
-        "dinner", "virtual-conference-information", "submission"]
+PAGES = ["cfp", "committee", "index", "program", "invited", "dinner"]
 IMAGES = [os.path.join("images", "logo", "LAW17_Logo.svg"), os.path.join("images", "lilian.png"), \
 	os.path.join("images", "anne.jpg"), os.path.join("images", "emily.png"), os.path.join("images", "explosion.svg"), os.path.join("images", "Bosch_logo.svg")]
 STYLESHEETS = [os.path.join("css", "law2023.css")]
