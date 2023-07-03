@@ -23,7 +23,7 @@ with open("paper_author_information.csv", encoding="utf-8") as f:
         info[paper_no] = (row[1], row[2]) # title, authors
 
 # Modify lower part of program.html
-with open("mainprogram.html") as f:
+with open("mainprogram.html", encoding="utf-8") as f:
     program_html = f.read()
 
 new_program_html = ""
