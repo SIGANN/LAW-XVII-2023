@@ -4,18 +4,18 @@ import csv
 
 global poster_sessions
 poster_sessions = {"Onsite Poster Session 1": [7, 9, 13, 22, 34, 41, 61, 62, 64],
-                   "Remote Poster Session 1": [],
-                   "Onsite Poster Session 2": [44, 47, 48, 50, 51, 52, 66, 68, 69],
-                   "Remote Poster Session 2": []
+                   "Remote Poster Session 1": [8, 11, 12, 18, 28, 63],
+                   "Onsite Poster Session 2": [44, 47, 48, 50, 51, 52, 58, 66, 68, 69],
+                   "Remote Poster Session 2": [20, 33, 38, 40, 42, 71]
                    }
 global session_chairs
-session_chairs = {"Remote Poster Session 1": "tbd",
-                         "Remote Poster Session 2": "tbd"}
+session_chairs = {"Remote Poster Session 1": "Djamé Seddah",
+                         "Remote Poster Session 2": "Heike Zinsmeister"}
 
 
 global info
 info = {}
-with open("paper_author_information.csv") as f:
+with open("paper_author_information.csv", encoding="utf-8") as f:
     r = csv.reader(f, delimiter=",", quotechar='"')
     next(r) # skip header
     for row in r:
@@ -32,7 +32,7 @@ def add_poster_session_info(new_program_html):
     for poster_session in poster_sessions:
         new_program_html += "<br/<br/><br/>\n\n<h2>" + poster_session + "</h2>\n"
         if poster_session.startswith("Remote"):
-            new_program_html += "<i>Session Chair:" + session_chairs[poster_session] + "</i><br/>\n"
+            new_program_html += "<i>Session Chair: " + session_chairs[poster_session] + "</i><br/>\n"
         if len(poster_sessions[poster_session]) == 0:
             new_program_html += "<i>Info on papers will be added soon.</i><br/><br/>\n\n"
 
@@ -54,5 +54,5 @@ for row in program_html.split("\n"):
         new_program_html += row + "\n\n"
         new_program_html = add_poster_session_info(new_program_html)
 
-with open("program.html", "w") as f:
+with open("program.html", "w", encoding="utf-8") as f:
     f.write(new_program_html)
