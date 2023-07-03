@@ -32,7 +32,7 @@ def add_poster_session_info(new_program_html):
     for poster_session in poster_sessions:
         new_program_html += "<br/<br/><br/>\n\n<h2>" + poster_session + "</h2>\n"
         if poster_session.startswith("Remote"):
-            new_program_html += "<i>Session Chair: " + session_chairs[poster_session] + "</i><br/>\n"
+            new_program_html += "<i>Session Chair: " + session_chairs[poster_session] + "</i><br/><br/>\n"
         if len(poster_sessions[poster_session]) == 0:
             new_program_html += "<i>Info on papers will be added soon.</i><br/><br/>\n\n"
 
