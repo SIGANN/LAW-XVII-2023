@@ -4,9 +4,9 @@ import csv
 
 global poster_sessions
 poster_sessions = {"Onsite Poster Session 1": [7, 9, 13, 22, 34, 41, 61, 62, 64],
-                   "Remote Poster Session 1": [8, 11, 12, 18, 28, 63],
+                   "Remote Poster Session 1": [8, 11, 18, 38, 40, 63],
                    "Onsite Poster Session 2": [44, 47, 48, 50, 51, 52, 58, 66, 68, 69],
-                   "Remote Poster Session 2": [20, 33, 38, 40, 42, 71]
+                   "Remote Poster Session 2": [12, 20, 28, 33, 42, 71]
                    }
 global session_chairs
 session_chairs = {"Remote Poster Session 1": "Djamé Seddah",
